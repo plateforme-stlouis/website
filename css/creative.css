@@ -3,6 +3,11 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-creative/blob/master/LICENSE)
  */
+
+/*
+  CHARTE_GRAPH:#7F7F93
+*/
+
 body,
 html {
   width: 100%;
@@ -14,18 +19,18 @@ body {
 hr {
   max-width: 50px;
   border-width: 3px;
-  border-color: #F05F40; }
+  border-color: #7F7F93; }
 
 hr.light {
   border-color: white; }
 
 a {
-  color: #F05F40;
+  color: #7F7F93;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s; }
   a:focus, a:hover {
-    color: #f05f40; }
+    color: #7F7F93; }
 
 h1,
 h2,
@@ -41,7 +46,7 @@ p {
   margin-bottom: 20px; }
 
 .bg-primary {
-  background-color: #F05F40 !important; }
+  background-color: #7F7F93 !important; }
 
 .bg-dark {
   color: white;
@@ -78,7 +83,7 @@ body {
   -webkit-tap-highlight-color: #222222; }
 
 #mainNav {
-  border-color: rgba(34, 34, 34, 0.05);
+    border-color: rgba(34, 34, 34, 0.05);
   background-color: white;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   -webkit-transition: all 0.2s;
@@ -87,10 +92,10 @@ body {
   #mainNav .navbar-brand {
     font-weight: 700;
     text-transform: uppercase;
-    color: #F05F40;
+    color: #7F7F93;
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; }
     #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-      color: #f05f40; }
+      color: #7F7F93; }
   #mainNav .navbar-toggle {
     font-size: 12px;
     font-weight: 700;
@@ -104,50 +109,56 @@ body {
     color: #222222; }
     #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover,
     #mainNav .navbar-nav > li.nav-item > a.nav-link:hover {
-      color: #F05F40; }
+      color: #7F7F93; }
     #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active,
     #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
-      color: #F05F40 !important;
+      color: #7F7F93 !important;
       background-color: transparent; }
       #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover,
       #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
         background-color: transparent; }
   @media (min-width: 992px) {
-    #mainNav {
-      border-color: rgba(255, 255, 255, 0.3);
-      background-color: transparent; }
+      #mainNav {
+          border-color: rgba(255, 255, 255, 0.3);
+          background-color: transparent; }
       #mainNav .navbar-brand {
-        color: rgba(255, 255, 255, 0.7); }
-        #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+          color:  black; /* color of Left words (e.g. Platforme blabla) */
+          /** init below == white **/
+          /* color: rgba(255, 255, 255, 0.7); */
+      }
+      #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
           color: white; }
       #mainNav .navbar-nav > li.nav-item > a.nav-link,
       #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
-        color: rgba(255, 255, 255, 0.7); }
-        #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
-        #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+          color: black; /* color of Right words (e.g., Missions, Services, etc.) */
+          /** init below == white **/
+          /* color: rgba(255, 255, 255, 0.7); */
+      }
+      #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
+      #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
           color: white; }
       #mainNav.navbar-shrink {
-        border-color: rgba(34, 34, 34, 0.05);
-        background-color: white; }
-        #mainNav.navbar-shrink .navbar-brand {
+          border-color: rgba(34, 34, 34, 0.05);
+          background-color: white; }
+      #mainNav.navbar-shrink .navbar-brand {
           font-size: 16px;
-          color: #F05F40; }
-          #mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {
-            color: #f05f40; }
-        #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
-        #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
+          color: #7F7F93; }
+      #mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {
+          color: #7F7F93; }
+      #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
+      #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
           color: #222222; }
-          #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
-          #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-            color: #F05F40; } }
+      #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
+      #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+          color: #7F7F93; } }
 
 header.masthead {
   position: relative;
   width: 100%;
   min-height: auto;
   text-align: center;
-  color: white;
-  background-image: url("../img/header.jpg");
+  color: white; /* title Big first page */
+  background-image: url("../img/header.png");
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -170,7 +181,7 @@ header.masthead {
       font-size: 16px;
       font-weight: 300;
       margin-bottom: 50px;
-      color: rgba(255, 255, 255, 0.7); }
+      color: white; } /* init: rgba(255, 255, 255, 0.7) */
   @media (min-width: 768px) {
     header.masthead {
       height: 100%;
@@ -253,14 +264,15 @@ header.masthead {
     margin: 0 auto 20px; }
 
 .text-primary {
-  color: #F05F40 !important; }
+  color: #7F7F93 !important; }
 
 .no-gutter > [class*='col-'] {
   padding-right: 0;
   padding-left: 0; }
 
 .btn-default {
-  color: #222222;
+    color: #222222;
+    border: none;
   border-color: white;
   background-color: white; }
   .btn-default.focus, .btn-default:focus {
@@ -297,14 +309,14 @@ header.masthead {
     background-color: #222222; }
 
 .btn-primary {
-  color: white;
-  border-color: #F05F40;
-  background-color: #F05F40; }
+    color: white;
+  border-color: #7F7F93;
+  background-color: #7F7F93; }
   .btn-primary.focus, .btn-primary:focus {
     color: white;
     border-color: #a4270d;
     background-color: #eb3812; }
-  .btn-primary:hover {
+  .btn-primary:hover { /* control effect when mouse should click */
     color: white;
     border-color: #e13612;
     background-color: #eb3812; }
@@ -327,16 +339,60 @@ header.masthead {
   fieldset[disabled] .btn-primary.focus,
   fieldset[disabled] .btn-primary:focus,
   fieldset[disabled] .btn-primary:hover {
-    border-color: #F05F40;
-    background-color: #F05F40; }
+    border-color: #7F7F93;
+    background-color: #7F7F93; }
   .btn-primary .badge {
-    color: #F05F40;
+    color: #7F7F93;
     background-color: white; }
+
+
+/**
+   Hack to add border on "Plus sur nos missions"
+   because with the nice background image, reading is not clear enough.
+**/
+.btn-primaryborder {
+    color: white;
+    border: solid 2px;
+  border-color:  #1f628d; /* or black ? */
+  background-color: #7F7F93; }
+  .btn-primaryborder.focus, .btn-primaryborder:focus {
+    color: white;
+    border-color: #a4270d;
+    background-color: #eb3812; }
+  .btn-primaryborder:hover { /* control effect when mouse should click */
+    color: white;
+    border-color: #e13612;
+    background-color: #eb3812; }
+  .btn-primaryborder.active, .btn-primaryborder:active,
+  .open > .btn-primaryborder.dropdown-toggle {
+    color: white;
+    border-color: #e13612;
+    background-color: #eb3812; }
+    .btn-primaryborder.active.focus, .btn-primaryborder.active:focus, .btn-primaryborder.active:hover, .btn-primaryborder:active.focus, .btn-primaryborder:active:focus, .btn-primaryborder:active:hover,
+    .open > .btn-primaryborder.dropdown-toggle.focus,
+    .open > .btn-primaryborder.dropdown-toggle:focus,
+    .open > .btn-primaryborder.dropdown-toggle:hover {
+      color: white;
+      border-color: #a4270d;
+      background-color: #c93110; }
+  .btn-primaryborder.active, .btn-primaryborder:active,
+  .open > .btn-primaryborder.dropdown-toggle {
+    background-image: none; }
+  .btn-primaryborder.disabled.focus, .btn-primaryborder.disabled:focus, .btn-primaryborder.disabled:hover, .btn-primaryborder[disabled].focus, .btn-primaryborder[disabled]:focus, .btn-primaryborder[disabled]:hover,
+  fieldset[disabled] .btn-primaryborder.focus,
+  fieldset[disabled] .btn-primaryborder:focus,
+  fieldset[disabled] .btn-primaryborder:hover {
+    border-color: #7F7F93;
+    background-color: #7F7F93; }
+  .btn-primaryborder .badge {
+    color: #7F7F93;
+    background-color: white; }
+
 
 .btn {
   font-weight: 700;
   text-transform: uppercase;
-  border: none;
+  /* border: none; */ /* comment this otherwise primaryborder has no effect */
   border-radius: 300px;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; }
 
