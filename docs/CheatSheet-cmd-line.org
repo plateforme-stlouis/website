@@ -1,0 +1,238 @@
+# -*- mode: org ; coding: utf-8 -*-
+
+#+TITLE: Terminal and Command-Line Cheat Sheet
+#+AUTHOR: simon
+#+EMAIL: prenom(simon) . nom(tournier) @ univ-paris-diderot.fr
+#+DATE: <2018-03-08 Thu>
+#+OPTIONS: ^:nil
+#+LATEX_HEADER: \usepackage{hyperref}
+#+LATEX_HEADER: \usepackage{datetime}
+#+LATEX: {}\footnotetext{This document was generated the: \today, \currenttime}
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../css/gnu.css" />
+
+
+#+HTML: <br>
+#+HTML: <div align="center">
+#+HTML: <a href="CheatSheet-cmd-line.pdf">PDF</a></p>
+#+HTML: </div>
+#+HTML: <br>
+
+#+BEGIN_CENTER
+*Open a Terminal and you can directly type the stuff below.*
+#+END_CENTER
+
+
+#+HTML: <br>
+----------------------------------------------------------------------
+#+BEGIN_CENTER
+If you have time, enjoy this [[https://en.wikipedia.org/wiki/In_the_Beginning..._Was_the_Command_Line][essay]] by the science-fiction author Neal
+Stephenson.
+
+
+Editing file is most of the job, so please also consider using a descent
+editor. The author uses and recommends [[https://www.gnu.org/software/emacs/][GNU Emacs]], because it simply rocks!
+#+END_CENTER
+----------------------------------------------------------------------
+#+HTML: <br>
+
+
+* Getting Help
+#+BEGIN_SRC shell
+man <command>
+#+END_SRC
+Quit by pressing =q=.
+
+#+BEGIN_EXAMPLE
+man ls
+man cd
+man mkdir
+#+END_EXAMPLE
+
+* The =TAB= key
+Whenever entering (long) paths or file names, the =TAB= key comes in
+very handy, because it *autocompletes* the end or proposes how to
+complete. *Autocompletion* is so handy...
+
+Imagine you want to enter in this fictional directory, by typing all
+these components:
+#+BEGIN_EXAMPLE
+cd /data/home/alturi/project/long-filename.ext
+#+END_EXAMPLE
+Prone error !! Instead, the =TAB= key is magic, try:
+#+BEGIN_EXAMPLE
+cd /d[TAB]ata/h[TAB]ome/al[TAB]turi/pro[TAB]ject/lo[TAB]ng-filename.ext
+#+END_EXAMPLE
+When you type ambiguous character (e.g., =pro= should point to your
+fictional folder =project/= or =product/=), the completion does not
+work. In that case, hit =TAB= twice to view all the possible matches and
+then type a few more characters.
+
+* History of the command line
+Just use =ARROW UP= and =DOWN= to navigate through the history.
+
+List all the recent history:
+#+BEGIN_SRC shell
+history
+#+END_SRC
+
+* Where I am
+#+BEGIN_SRC shell
+pwd
+#+END_SRC
+Show the absolute path.
+
+* Create new directory
+#+BEGIN_SRC shell
+mkdir <name>
+#+END_SRC
+You can also create the directory and couple of subfolders:
+#+BEGIN_EXAMPLE
+mkdir -p my-project/this/that
+#+END_EXAMPLE
+
+* Change directory
+#+BEGIN_SRC shell
+cd <directory>
+#+END_SRC
+For example, go to the previous created folder, and verify you are in:
+#+BEGIN_EXAMPLE
+cd my-project/this/that
+pwd
+#+END_EXAMPLE
+Go at one level up (parent directory) and verify again:
+#+BEGIN_EXAMPLE
+cd ..
+pwd
+#+END_EXAMPLE
+Go to the folder =that/= then go at two levels up:
+#+BEGIN_EXAMPLE
+cd that/
+pwd
+cd ../..
+pwd
+#+END_EXAMPLE
+Note that:
+#+BEGIN_EXAMPLE
+cd
+#+END_EXAMPLE
+go to the =$HOME= folder.
+
+* List the content of a directory
+#+BEGIN_SRC shell
+ls <directory>
+#+END_SRC
+and without any =<directory>= name, list the current folder.
+
+List all the files, even the hidden ones:
+#+BEGIN_EXAMPLE
+ls -a
+#+END_EXAMPLE
+List the files and sort them by reverse order of modified time:
+#+BEGIN_EXAMPLE
+ls -rt1
+#+END_EXAMPLE
+List the files with some useful information (permissions, owner, size
+etc.)
+#+BEGIN_EXAMPLE
+ls -l
+#+END_EXAMPLE
+List recursively through the subfolders:
+#+BEGIN_EXAMPLE
+ls -R
+#+END_EXAMPLE
+
+* Read the content of a file
+#+BEGIN_SRC shell
+less <filename>
+#+END_SRC
+Quit with =q=.
+
+* Display the first =N= lines (last =N= lines)
+#+BEGIN_SRC shell
+head -nN <filename>
+tail -nN <filename>
+#+END_SRC
+For example, display the first 5 commands:
+#+BEGIN_EXAMPLE
+head -n5 ~/.bash_history
+#+END_EXAMPLE
+
+* Clear the terminal window (just cosmetic)
+#+BEGIN_SRC shell
+clear
+#+END_SRC
+Nothing is erased, it is pure cosmetic by refreshing.
+
+* Copy file / directory
+#+BEGIN_SRC shell
+cp <source> <target>
+#+END_SRC
+For example, copy the history of the command lines and list the folder:
+#+BEGIN_EXAMPLE
+cp ~/.bash_history ~/my-history
+ls -rt1
+#+END_EXAMPLE
+After creating a new folder, copy the file into it:
+#+BEGIN_EXAMPLE
+cp my-history my-project/this/that
+ls my[TAB]-project/[TAB]this/[TAB]that/
+#+END_EXAMPLE
+Copy folders:
+#+BEGIN_EXAMPLE
+cp -R my-project my-project2
+ls -R my-project2
+#+END_EXAMPLE
+* Rename file / directory
+#+BEGIN_SRC
+mv <source> <target>
+#+END_SRC
+
+* Remove file / directory
+#+BEGIN_SRC shell
+rm <filename>
+rm -fr <filename>
+#+END_SRC
+The option =-f= means force. Be careful !!
+
+* Search files
+#+BEGIN_SRC shell
+find <dir> -name "<filename>" -type f
+#+END_SRC
+For example, list all the files with the extensions =.fastq.gz= in the
+current folder:
+#+BEGIN_EXAMPLE
+find . -name "*.fastq.gz" -type f -print
+#+END_EXAMPLE
+Find all Pearl files =.pl= containing the occurence /xls/ and print the line:
+#+BEGIN_EXAMPLE
+find . -type f -name "*.pl" -print | xargs grep -nH xls
+#+END_EXAMPLE
+
+* Copy files / directory through the network
+#+BEGIN_SRC shell
+rsync -av --progress <source> <target>
+#+END_SRC
+For example, push local folder to server
+=toto.tata.univ-paris-diderot.fr=:
+#+BEGIN_EXAMPLE
+rsync -av --progress my-project username@toto.tata.univ-paris-diderot.fr:~/
+#+END_EXAMPLE
+Pull remote folder:
+#+BEGIN_EXAMPLE
+rsync -av --progress username@toto.tata.univ-paris-diderot.fr:~/my-project my-project2
+#+END_EXAMPLE
+Be careful with the trailing slash =/=. Explanations later !
+
+* Check what is going on
+#+BEGIN_SRC shell
+htop
+#+END_SRC
+
+
+#+HTML: <br>
+--------------------------------------------------------
+#+HTML: <br>
+#+HTML: <div align="center">
+#+HTML: <a href="CheatSheet-cmd-line.pdf">PDF</a></p>
+#+HTML: </div>
+#+HTML: <br>

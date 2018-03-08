@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Terminal and Command-Line Cheat Sheet</title>
+<!-- 2018-03-08 Thu 20:19 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="simon" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../css/gnu.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Terminal and Command-Line Cheat Sheet</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Getting Help</a></li>
+<li><a href="#sec-2">2. The <code>TAB</code> key</a></li>
+<li><a href="#sec-3">3. History of the command line</a></li>
+<li><a href="#sec-4">4. Where I am</a></li>
+<li><a href="#sec-5">5. Create new directory</a></li>
+<li><a href="#sec-6">6. Change directory</a></li>
+<li><a href="#sec-7">7. List the content of a directory</a></li>
+<li><a href="#sec-8">8. Read the content of a file</a></li>
+<li><a href="#sec-9">9. Display the first <code>N</code> lines (last <code>N</code> lines)</a></li>
+<li><a href="#sec-10">10. Clear the terminal window (just cosmetic)</a></li>
+<li><a href="#sec-11">11. Copy file / directory</a></li>
+<li><a href="#sec-12">12. Rename file / directory</a></li>
+<li><a href="#sec-13">13. Remove file / directory</a></li>
+<li><a href="#sec-14">14. Search files</a></li>
+<li><a href="#sec-15">15. Copy files / directory through the network</a></li>
+<li><a href="#sec-16">16. Check what is going on</a></li>
+</ul>
+</div>
+</div>
+<br>
+<div align="center">
+<a href="CheatSheet-cmd-line.pdf">PDF</a></p>
+</div>
+<br>
+
+<div class="center">
+<p>
+<b>Open a Terminal and you can directly type the stuff below.</b>
+</p>
+</div>
+
+
+<br>
+<hr  />
+<div class="center">
+<p>
+If you have time, enjoy this <a href="https://en.wikipedia.org/wiki/In_the_Beginning..._Was_the_Command_Line">essay</a> by the science-fiction author Neal
+Stephenson.
+</p>
+
+
+<p>
+Editing file is most of the job, so please also consider using a descent
+editor. The author uses and recommends <a href="https://www.gnu.org/software/emacs/">GNU Emacs</a>, because it simply rocks!
+</p>
+</div>
+<hr  />
+<br>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Getting Help</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-src-container">
+
+<pre class="src src-shell">man &lt;command&gt;
+</pre>
+</div>
+<p>
+Quit by pressing <code>q</code>.
+</p>
+
+<pre class="example">
+man ls
+man cd
+man mkdir
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> The <code>TAB</code> key</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Whenever entering (long) paths or file names, the <code>TAB</code> key comes in
+very handy, because it <b>autocompletes</b> the end or proposes how to
+complete. <b>Autocompletion</b> is so handy&#x2026;
+</p>
+
+<p>
+Imagine you want to enter in this fictional directory, by typing all
+these components:
+</p>
+<pre class="example">
+cd /data/home/alturi/project/long-filename.ext
+</pre>
+<p>
+Prone error !! Instead, the <code>TAB</code> key is magic, try:
+</p>
+<pre class="example">
+cd /d[TAB]ata/h[TAB]ome/al[TAB]turi/pro[TAB]ject/lo[TAB]ng-filename.ext
+</pre>
+<p>
+When you type ambiguous character (e.g., <code>pro</code> should point to your
+fictional folder <code>project/</code> or <code>product/</code>), the completion does not
+work. In that case, hit <code>TAB</code> twice to view all the possible matches and
+then type a few more characters.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> History of the command line</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Just use <code>ARROW UP</code> and <code>DOWN</code> to navigate through the history.
+</p>
+
+<p>
+List all the recent history:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-shell">history
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Where I am</h2>
+<div class="outline-text-2" id="text-4">
+<div class="org-src-container">
+
+<pre class="src src-shell">pwd
+</pre>
+</div>
+<p>
+Show the absolute path.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Create new directory</h2>
+<div class="outline-text-2" id="text-5">
+<div class="org-src-container">
+
+<pre class="src src-shell">mkdir &lt;name&gt;
+</pre>
+</div>
+<p>
+You can also create the directory and couple of subfolders:
+</p>
+<pre class="example">
+mkdir -p my-project/this/that
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Change directory</h2>
+<div class="outline-text-2" id="text-6">
+<div class="org-src-container">
+
+<pre class="src src-shell">cd &lt;directory&gt;
+</pre>
+</div>
+<p>
+For example, go to the previous created folder, and verify you are in:
+</p>
+<pre class="example">
+cd my-project/this/that
+pwd
+</pre>
+<p>
+Go at one level up (parent directory) and verify again:
+</p>
+<pre class="example">
+cd ..
+pwd
+</pre>
+<p>
+Go to the folder <code>that/</code> then go at two levels up:
+</p>
+<pre class="example">
+cd that/
+pwd
+cd ../..
+pwd
+</pre>
+<p>
+Note that:
+</p>
+<pre class="example">
+cd
+</pre>
+<p>
+go to the <code>$HOME</code> folder.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> List the content of a directory</h2>
+<div class="outline-text-2" id="text-7">
+<div class="org-src-container">
+
+<pre class="src src-shell">ls &lt;directory&gt;
+</pre>
+</div>
+<p>
+and without any <code>&lt;directory&gt;</code> name, list the current folder.
+</p>
+
+<p>
+List all the files, even the hidden ones:
+</p>
+<pre class="example">
+ls -a
+</pre>
+<p>
+List the files and sort them by reverse order of modified time:
+</p>
+<pre class="example">
+ls -rt1
+</pre>
+<p>
+List the files with some useful information (permissions, owner, size
+etc.)
+</p>
+<pre class="example">
+ls -l
+</pre>
+<p>
+List recursively through the subfolders:
+</p>
+<pre class="example">
+ls -R
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Read the content of a file</h2>
+<div class="outline-text-2" id="text-8">
+<div class="org-src-container">
+
+<pre class="src src-shell">less &lt;filename&gt;
+</pre>
+</div>
+<p>
+Quit with <code>q</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Display the first <code>N</code> lines (last <code>N</code> lines)</h2>
+<div class="outline-text-2" id="text-9">
+<div class="org-src-container">
+
+<pre class="src src-shell">head -nN &lt;filename&gt;
+tail -nN &lt;filename&gt;
+</pre>
+</div>
+<p>
+For example, display the first 5 commands:
+</p>
+<pre class="example">
+head -n5 ~/.bash_history
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> Clear the terminal window (just cosmetic)</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-src-container">
+
+<pre class="src src-shell">clear
+</pre>
+</div>
+<p>
+Nothing is erased, it is pure cosmetic by refreshing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> Copy file / directory</h2>
+<div class="outline-text-2" id="text-11">
+<div class="org-src-container">
+
+<pre class="src src-shell">cp &lt;source&gt; &lt;target&gt;
+</pre>
+</div>
+<p>
+For example, copy the history of the command lines and list the folder:
+</p>
+<pre class="example">
+cp ~/.bash_history ~/my-history
+ls -rt1
+</pre>
+<p>
+After creating a new folder, copy the file into it:
+</p>
+<pre class="example">
+cp my-history my-project/this/that
+ls my[TAB]-project/[TAB]this/[TAB]that/
+</pre>
+<p>
+Copy folders:
+</p>
+<pre class="example">
+cp -R my-project my-project2
+ls -R my-project2
+</pre>
+</div>
+</div>
+<div id="outline-container-sec-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> Rename file / directory</h2>
+<div class="outline-text-2" id="text-12">
+<pre class="example">
+mv &lt;source&gt; &lt;target&gt;
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-13" class="outline-2">
+<h2 id="sec-13"><span class="section-number-2">13</span> Remove file / directory</h2>
+<div class="outline-text-2" id="text-13">
+<div class="org-src-container">
+
+<pre class="src src-shell">rm &lt;filename&gt;
+rm -fr &lt;filename&gt;
+</pre>
+</div>
+<p>
+The option <code>-f</code> means force. Be careful !!
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-14" class="outline-2">
+<h2 id="sec-14"><span class="section-number-2">14</span> Search files</h2>
+<div class="outline-text-2" id="text-14">
+<div class="org-src-container">
+
+<pre class="src src-shell">find &lt;dir&gt; -name "&lt;filename&gt;" -type f
+</pre>
+</div>
+<p>
+For example, list all the files with the extensions <code>.fastq.gz</code> in the
+current folder:
+</p>
+<pre class="example">
+find . -name "*.fastq.gz" -type f -print
+</pre>
+<p>
+Find all Pearl files <code>.pl</code> containing the occurence <i>xls</i> and print the line:
+</p>
+<pre class="example">
+find . -type f -name "*.pl" -print | xargs grep -nH xls
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-15" class="outline-2">
+<h2 id="sec-15"><span class="section-number-2">15</span> Copy files / directory through the network</h2>
+<div class="outline-text-2" id="text-15">
+<div class="org-src-container">
+
+<pre class="src src-shell">rsync -av --progress &lt;source&gt; &lt;target&gt;
+</pre>
+</div>
+<p>
+For example, push local folder to server
+<code>toto.tata.univ-paris-diderot.fr</code>:
+</p>
+<pre class="example">
+rsync -av --progress my-project username@toto.tata.univ-paris-diderot.fr:~/
+</pre>
+<p>
+Pull remote folder:
+</p>
+<pre class="example">
+rsync -av --progress username@toto.tata.univ-paris-diderot.fr:~/my-project my-project2
+</pre>
+<p>
+Be careful with the trailing slash <code>/</code>. Explanations later !
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-16" class="outline-2">
+<h2 id="sec-16"><span class="section-number-2">16</span> Check what is going on</h2>
+<div class="outline-text-2" id="text-16">
+<div class="org-src-container">
+
+<pre class="src src-shell">htop
+</pre>
+</div>
+
+
+<br>
+<hr  />
+<br>
+<div align="center">
+<a href="CheatSheet-cmd-line.pdf">PDF</a></p>
+</div>
+<br>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-03-08 Thu&gt;</span></span></p>
+<p class="author">Author: simon</p>
+<p class="date">Created: 2018-03-08 Thu 20:19</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
