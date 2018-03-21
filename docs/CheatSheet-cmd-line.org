@@ -145,7 +145,7 @@ ls -R
 #+BEGIN_SRC shell
 less <filename>
 #+END_SRC
-Quit with =q=.
+Quit with =:q=.
 
 * Display the first =N= lines (last =N= lines)
 #+BEGIN_SRC shell
@@ -226,6 +226,21 @@ Be careful with the trailing slash =/=. Explanations later !
 * Check what is going on
 #+BEGIN_SRC shell
 htop
+#+END_SRC
+
+* Kill active process
+#+BEGIN_SRC shell
+CONTROL c
+#+END_SRC
+Or you can find the process number with:
+#+BEGIN_SRC shell
+ps -fe | less
+#+END_SRC
+and identify the guilty.
+
+* Disconnect the session
+#+BEGIN_SRC shell
+CONTROL d
 #+END_SRC
 
 
