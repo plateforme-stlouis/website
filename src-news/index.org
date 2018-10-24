@@ -1,0 +1,42 @@
+# -*- mode: org ; coding: utf-8 -*-
+
+#+TITLE: Quelques nouvelles plus ou moins récentes
+#+AUTHOR: simon
+#+EMAIL: prenom(simon) . nom(tournier) @ univ-paris-diderot.fr
+#+DATE: <2018-03-08 Thu>
+#+OPTIONS: ^:nil toc:nil num:nil
+#+LATEX_HEADER: \usepackage{hyperref}
+#+LATEX_HEADER: \usepackage{datetime}
+#+LATEX: {}\footnotetext{This document was generated the: \today, \currenttime}
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../css/gnu.css" />
+#+HTML_HEAD: <link rel="stylesheet" href="../css/gnu.css" />
+
+
+# (setq org-link-file-path-type 'relative)
+
+
+#+BEGIN_center
+*N'hésitez pas à nous [[file:../index.html#contact][contacter]] !*
+#+END_center
+
+
+
+* Séminaire Technologique
+#+BEGIN_VERSE
+Tous les *mardis* -- *10h30-12h* -- salle Laurent Degos
+#+END_VERSE
+
+- *18 septembre 2018*: Présentation par Société Miltenyi Biotec (FlowLogic, MACSQuant)
+- *09 octobre 2018*: Partage d'expériences -- instrument Incucyte
+- *23 octobre 2018*: Outils et Astuces pour mettre en place un panel multicouleurs
+
+* Docs
+
+- [[file:../docs/Tarifs-Plateforme.pdf][Tarifs de Plateforme Saint-Louis]]
+- [[file:../docs/Cyto-configs.pdf][Configuration des cytométres]]
+- [[file:../docs/CheatSheet-cmd-line.html][Petit manuel de survie pour utiliser un terminal]]
+
+
+#+BEGIN_VERSE
+*N'hésitez pas à nous [[file:../index.html#contact][contacter]] !*
+#+END_VERSE

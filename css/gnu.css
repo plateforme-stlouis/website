@@ -369,3 +369,24 @@ div.formula > pre.formula {
    margin: 0;
    border: none;
 }
+
+
+div.display, div.lisp, div.smalldisplay,
+ div.smallverse, div.smalllisp { margin-left: 3%; }
+
+div.verse { padding: .8em 1.2em .4em; }
+p.verse { padding: .8em 1.2em; }
+div.verse, p.verse {
+    text-align: center;
+   margin: 1em 0 1em 3% ;
+   -webkit-border-radius: .3em;
+   -moz-border-radius: .3em;
+   border-radius: .3em;
+   border: 1px solid #c6cbb5;
+   background-color: #e4efe3;
+}
+div.verse > p.verse {
+   padding: 0 0 .4em;
+   margin: 0;
+   border: none;
+}
