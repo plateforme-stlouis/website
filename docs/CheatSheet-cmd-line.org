@@ -8,8 +8,8 @@
 #+LATEX_HEADER: \usepackage{hyperref}
 #+LATEX_HEADER: \usepackage{datetime}
 #+LATEX: {}\footnotetext{This document was generated the: \today, \currenttime}
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/gnu.css" />
-#+HTML_HEAD: <link rel="stylesheet" href="css/gnu.css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../css/gnu.css" />
+#+HTML_HEAD: <link rel="stylesheet" href="../css/gnu.css" />
 
 #+HTML: <br>
 #+HTML: <div align="center">
