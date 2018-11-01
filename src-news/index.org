@@ -57,3 +57,8 @@ demandes/retours.
 #+BEGIN_VERSE
 *N'hésitez pas à nous [[file:../index.html#contact][contacter]] !*
 #+END_VERSE
+
+
+#+BEGIN_CENTER
+[[../index.html][Page Principale]]
+#+END_CENTER
