@@ -21,7 +21,7 @@
 
 
 
-* Séminaire Technologique
+* Atelier Technologique
 #+BEGIN_VERSE
 Tous les *mardis* -- *10h30-12h* -- salle Laurent Degos
 #+END_VERSE
