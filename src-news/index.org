@@ -3,7 +3,7 @@
 #+TITLE: Quelques nouvelles plus ou moins récentes
 #+AUTHOR: simon
 #+EMAIL: prenom(simon) . nom(tournier) @ univ-paris-diderot.fr
-#+DATE: <2018-03-08 Thu>
+#+DATE: first release <2018-09-18 Tue>
 #+OPTIONS: ^:nil toc:nil num:nil
 #+LATEX_HEADER: \usepackage{hyperref}
 #+LATEX_HEADER: \usepackage{datetime}
@@ -50,7 +50,7 @@ demandes/retours.
 * Docs
 
 - [[file:../docs/Tarifs-Plateforme.pdf][Tarifs de Plateforme Saint-Louis]]
-- [[file:../docs/Cyto-configs.pdf][Configuration des cytométres]]
+- [[file:../docs/Cyto-configs.pdf][Configuration des cytométres]] / [[http://www.bdbiosciences.com/us/s/spectrumviewer][BD Spectrum Viewer]] / [[https://www.thermofisher.com/fr/fr/home/life-science/cell-analysis/labeling-chemistry/fluorescence-spectraviewer.html][ThermoFisher Spectra Viewer]]
 - [[file:../docs/CheatSheet-cmd-line.html][Petit manuel de survie pour utiliser un terminal]]
 
 
