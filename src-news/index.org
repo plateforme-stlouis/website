@@ -1,4 +1,5 @@
 # -*- mode: org ; coding: utf-8 -*-
+#+STARTUP: showall
 
 #+TITLE: Quelques nouvelles plus ou moins récentes
 #+AUTHOR: simon
