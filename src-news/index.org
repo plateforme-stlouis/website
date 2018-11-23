@@ -29,7 +29,7 @@ Tous les *mardis* -- *10h30-12h* -- salle Laurent Degos
 
 ** À venir
 
-- *20 novembre 2018*: Clariostar, lecteur de plaques multifonction
+
 - *27 novembre 2018*: Introduction à R
 - *4 décembre 2018*: IQue Intellicyt
 - *11 décembre 2018*: À la poursuite de R
@@ -40,6 +40,7 @@ Tous les *mardis* -- *10h30-12h* -- salle Laurent Degos
 Ces sujets pourront être traités à nouveau, suivant vos
 demandes/retours.
 
+- *20 novembre 2018*: Clariostar, lecteur de plaques multifonction
 - *13 novembre 2018*: Incucyte S3: 1 an après...
 - *6 novembre 2018*: Retour sur un test de MinION
 - *30 octobre 2018*: Qualification des acides nucléiques
