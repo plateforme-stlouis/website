@@ -1,0 +1,605 @@
+---
+title: "Part 1 - R introduction"
+output:
+  html_document: default
+  html_notebook: default
+  pdf_document: default
+  word_document: default
+---
+
+Simon says:
+
+ - **learn is hard**: remember all the hours learning biology concepts;
+ - **be patient and practise**: remember your experiments rarely success with your first attempt;
+ - **use fresh eyes**: do not try to compare (yes, there is similarity with Excel or other); adopt the foreign language/culture learning process;
+ - **be organised**: apply your experimental methodologies to your computational analysis; track your work with a *digital* **lab notebook**, e.g., with RMardown files. ;-)
+
+
+In this introduction to R, we will present the main R concepts, by introducing
+R variables, vectors, matrices, lists, functions and packages.
+
+Please read http://adv-r.had.co.nz/Style.html.
+
+# Variable
+
+In R, we have two main types of values: numeric values and characters. Numerics:
+```{r}
+12
+3.14
+-42.12
+```
+and characters:
+```{r}
+"text"
+"Rock and Roll"
+```
+The characters also named strings are between double-quote `"` (french keyboard: key 3).
+
+We can save these values in variables,
+```{r}
+
+a <- 3.14
+
+```
+so we can easily access them later or re-use them:
+```{r}
+
+a + a
+a
+
+```
+
+We can compute, save the value and display it:
+```{r}
+
+result <- 2*a + 3 * pi
+result
+
+```
+
+
+### Exercises
+
+1) Assign a number of your choice to the variable `b`
+```{r}
+
+```
+
+2) Show what's in `b`
+```{r}
+
+```
+
+3) Multiply `a` by `2`
+```{r}
+
+```
+
+4) Add `10` to `a`
+```{r}
+
+```
+
+5) Assign your name to an object called name
+```{r}
+
+```
+
+
+
+# Vector / List
+
+Vector contains several values:
+```{r}
+
+b <- 1:10
+
+```
+
+We can concatenate these values with the `c()` function:
+```{r}
+
+c(b, b)
+
+```
+
+We can also apply mathematical formulas to them:
+```{r}
+
+b + b
+3 * b
+
+```
+
+
+### Exercises
+
+6) Concatenate `a` and `b`
+```{r}
+
+```
+
+7) Concatenate your name and `a`
+```{r}
+
+```
+
+8) Add `a` to `b`
+```{r}
+
+```
+
+
+
+# Built-in Function
+
+Many functions exist in R, and greatly simplify our life.
+
+
+How to compute the mean of the variable `b` ? The naive way:
+```{r}
+
+(1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)/10
+
+```
+And now, what does it happen if `b <- 5:17`? We have to modify the formula.
+Not enough powerful. R has built-in functions to easily compute common
+quantities.
+
+For example, the mean is computed by:
+```{r}
+
+mean(b)
+
+```
+Moreover, we can compose the function and the mathematical operations
+(also fucntion).
+```{r}
+
+m <- mean(b + b)
+m
+
+```
+What about the median? Easy:
+```{r}
+
+median(b)
+
+```
+And the number of elements (the length of the vector/list):
+```{r}
+
+length(b)
+length(b + b)
+length(c(b, b))
+
+```
+The concatenation `c()` is a built-in function.
+
+
+Let sum all the elements, find the minimum, the maximum:
+```{r}
+
+sum(b)
+min(b)
+max(b)
+
+```
+Or print a statistical summary:
+```{r}
+
+summary(b)
+
+```
+
+List the 6 first elements:
+```{r}
+
+head(b)
+
+```
+or the 6 last:
+```{r}
+
+tail(b)
+
+```
+or the 4 last:
+```{r}
+
+tail(b, n=4)
+
+```
+Be careful, R does not warn even if we are asking *weird* stuff:
+```{r}
+
+head(b, n=20)
+
+```
+
+We can read help using:
+```{r}
+
+?tail
+
+```
+or the Help facilities of RStudio.
+
+
+
+### Exercises
+
+
+9) Create the vector 13, 13, 13, 13, 14, 14, 16, 18, 21 and asign it to a variable:
+```{r}
+
+```
+
+10) Compute the median:
+```{r}
+
+```
+
+11) Compute the mean:
+```{r}
+
+```
+
+12) Is it normal? ;-)
+
+13) Compute the length:
+```{r}
+
+```
+
+14) Sum all the values:
+```{r}
+
+```
+
+15) Compute the mean using the previous sum and length
+```{r}
+
+```
+
+
+# Block (chunk) with comment
+
+We sometimes want to insert a comment to remind the purpose of an
+action.
+
+A comment starts with the symbol sharp `#`.
+```{r}
+
+# this is a comment
+
+```
+and a comment does nothing when evaluated.
+
+It is really useful to explain several lines:
+```{r}
+
+# Assign a list from 10 to 25 to the variable named var
+var <- 10:25
+
+# Select first elements
+head(var)
+
+var + var # return a new list
+
+# Eval the length the concatenated list
+length(c(var, var))
+
+```
+
+The comments do not appear in the Output block.
+However they appear in the final document (see this doc).
+
+
+# Matrices / Table
+
+Matrices can be compared to tables: they are two dimensional and can contain numbers, characters, etc.
+
+Let load a matrix:
+```{r}
+load("cyto.RData")
+cyto
+```
+
+We can check the number of rows and columns in the cyto object:
+```{r}
+
+nrow(cyto)
+ncol(cyto)
+dim(cyto)
+
+```
+
+Load data from CSV file and show a summary:
+```{r}
+
+df <- read.csv2(file='example.csv', header=TRUE, dec=",", sep=";")
+dim(df)
+summary(df)
+
+```
+
+
+# Indexing
+
+We can display the element in the first row and the first column, or the
+2nd row and 3rd column.
+```{r}
+
+cyto[1, 1]
+cyto[2, 3]
+
+```
+The indexing convention is: row, column.
+
+
+All the elements of a specific column of a matrix can be selected by its
+number, here the 3rd column:
+```{r}
+
+fcs_a <- cyto[, 3]
+fcs_a
+
+```
+
+How to concatenate two columns ?
+```{r}
+
+# 1. select column 2 and column 5
+# 2. concatenate them
+# 3. store in the variable
+fcs_b <- c(cyto[, 2], cyto[, 5])
+fcs_b
+
+# 1. concatenate the number 2 and 5
+# 2. select the columns 2 and 5
+# 3. store
+fcs_c <- cyto[, c(2, 5)]
+fcs_c
+
+# Do you see the difference ?
+
+```
+
+The column can also be selected by typing its column name directly:
+```{r}
+
+cd45 <- cyto[, "CD34"]
+cd45
+cd45_b <- cyto[, 5]
+cd45_b
+
+```
+Idem to select several columns:
+```{r}
+
+cd45_c <- cyto[, c("CD34", "CD45")]
+cd45_c
+
+```
+
+However, you cannot mix number and name to select columns. 
+This chunk returns an error:
+```{r}
+
+# cyto[, c(1, "CD34")]
+
+```
+
+Conversely, we can select a specific row, here the second:
+```{r}
+cell2 <- cyto[2, ]
+cell2
+```
+
+
+## Important to remember
+
+ - The names are important.
+ - The spaces in column name are hell.
+
+**Good names** of variables, columns, files, etc. **ease a lot** the
+analysis, especially when things are not going as expected.
+
+
+### Exercises
+
+16) Show the 2 first rows of the cyto matrix
+```{r}
+
+```
+
+17) Show the `FSC-A` value of the first cell
+```{r}
+
+```
+
+
+
+# More on list
+
+Lists in R can be compared to vectors, which can contain various objects:
+```{r}
+
+random_numbers <- c(1, 2, 3, 7)
+random_letters <- c("A", "B", "C", "Z")
+
+```
+The variables `random_numbers` and `random_letters` are two lists
+containing 4 numbers or 4 letters.
+
+These two lists can be associated to create another list:
+```{r}
+
+my_list_b <- list(random_letters, random_numbers)
+my_list_b
+
+```
+The variable `my_list_b` is a list containing two sub-lists. These
+sub-lists can be named:
+```{r}
+
+my_list <- list(my_numbers = random_numbers,
+                my_letters = random_letters)
+my_list
+
+```
+
+The different items of a list can then be accessed by using the `$` and
+typing their name directly:
+```{r}
+
+my_list$my_numbers
+
+```
+
+
+### Exercises
+
+18) Create a list containing your name, and job:
+```{r}
+
+```
+
+
+# Packages
+
+Packages contain sets of useful functions, which can be installed, loaded, and
+then used in R. A package needs to be installed only once on your computer:
+```{r}
+
+#install.packages("Rtsne")
+
+```
+
+But needs to be loaded every time you wish to use it:
+```{r}
+
+#library(Rtsne)
+
+```
+
+The functions of an installed package can then be used. They often need the user to set parameters:
+```{r}
+
+#tsne <- Rtsne(cyto)
+
+```
+
+This line would generate an error, we need to lower the perplexity as we only
+have 10 cells.
+
+```{r}
+
+#tsne <- Rtsne(cyto, perplexity = 2)
+#tsne$Y
+
+```
+
+You can always ask help to R, if you wish to know how a function works:
+```{r}
+
+#?Rtsne
+
+```
+
+
+# Define your own function
+
+It is easy to define new functions. For example, I redefine my way to compute the mean:
+```{r}
+
+moyenne <- function(lst) {
+  sumall <- sum(lst)
+  len <- length(lst)
+  moy <- sumall / len
+  moy
+}
+
+```
+Then I can use it:
+```{r}
+
+onelist <- 1:10
+moyenne(onelist)
+
+```
+and the result is the same than `mean(onelist)` i.e., `r mean(onelist)`.
+
+It is out of this presentation, but R is powerful and you can write loops over list, test value, etc.
+```{r}
+
+moyenne.absolute <- function(lst) {
+  # init temporary variables
+  nelem <- 0
+  tot <- 0
+  # loop over all the elements of the list
+  for (val in lst) {
+    if (val > 0 ) {
+      tot <- tot + val
+    } else {
+      tot <- tot - val
+    }
+    nelem <- nelem + 1
+  }
+  # compute something
+  moy <- tot / nelem
+  # return it
+  moy
+}
+
+```
+and this function computes `mean(abs(lst))`. Let check that:
+```{r}
+
+one <- 1:10
+onelist <- c(-one, 2*one)
+
+moyenne.absolute(onelist) == mean(abs(onelist))
+
+```
+Well, if this section is not clear for you, then do not worry. We will talk again later.
+
+
+
+# RMarkdown summary
+
+ - list starts with `-`
+ - *italics* is `*italics*`
+ - **bold** is `**bold**`
+ - `code` is `` `code` ``
+ - equation $E=mc^2 + \sum x_i$ is `$E=mc^2 + \sum x_i$`
+ - section starts with `#`, subsection with `##`, subsubsubsection with `###`, etc.
+ - [hyperlink](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) is
+   `[hyperlink](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)`
+ 
+## Subsection talking about table
+
+You can also pretty print, e.g., a table:
+```{r echo=FALSE, results='asis'}
+library(knitr)
+kable(cyto[3:7,c("CD45", "CD34", "CD56")], caption='Legend of the cyto table')
+```
+
+### Subsubsection talking about figure
+
+```{r echo=FALSE, fig.cap="My nice caption of my nice figure"}
+plot(cyto[,"FSC-A"], cyto[, "SSC-A"])
+```
+
+
+# Further readings
+
+You could also have a look at the following online resources:
+
+ - https://rmarkdown.rstudio.com/lesson-1.html
+ - https://www.rstudio.com/online-learning/#r-programming
+ - https://www.youtube.com/watch?v=o0Y478jOjGk (11min29)
+ - https://www.youtube.com/watch?v=u1r5XTqrCTQ (2min52)
+ 
+Please read http://adv-r.had.co.nz/Style.html.

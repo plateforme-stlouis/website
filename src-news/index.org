@@ -30,7 +30,7 @@ Tous les *mardis* -- *10h30-12h* -- salle Laurent Degos
 ** À venir
 
 
-- *27 novembre 2018*: Introduction à R
+- *27 novembre 2018*: [[file:~/work/website/ateliers/1_R_Intro.html][Introduction à R]] (see files: [[file:~/work/website/ateliers/1_R_Intro.Rmd][1_R_Intro.Rmd]] and [[file:~/work/website/ateliers/cyto.RData][cyto.RData]] and [[file:~/work/website/ateliers/example.csv][example.csv]])
 - *4 décembre 2018*: IQue Intellicyt
 - *11 décembre 2018*: À la poursuite de R
 
