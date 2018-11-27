@@ -1,0 +1,208 @@
+\documentclass[10pt, xcolor=table]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{pgfpages}
+
+%% %% truc de Berty
+%% \usepackage{import}
+
+%ajouts perso:
+\usepackage{t1enc,ae}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{subfigure}
+%\usepackage{caption}
+%\usepackage{subcaption}
+%\usepackage{hyperref}
+%\usepackage{cancel}
+
+% pour les symboles exotiques
+%\usepackage{textcomp}
+%\usepackage{pifont}
+
+\usepackage{epstopdf}
+%\usepackage{xcolor}
+%\usepackage[table]{xcolor}
+\definecolor{lightgray}{gray}{0.9}
+
+
+\newcommand{\violet}{\textcolor{violet}}
+\newcommand{\blue}{\textcolor{blue}}
+\newcommand{\red}{\textcolor{red}}
+\newcommand{\black}{\textcolor{black}}
+\newcommand{\rose}{\textcolor{magenta}}
+\newcommand{\cyan}{\textcolor{cyan}}
+\newcommand{\green}{\textcolor{green}}
+
+\pgfpagesuselayout{resize to}[a4paper,border shrink=5mm,landscape]
+
+% theme classique
+\mode<presentation>
+%\useoutertheme{Madrid}
+\usecolortheme{whale}
+\usecolortheme{orchid}
+\useinnertheme[shadow=true]{rounded}
+\setbeamerfont{block title}{size={}}
+
+
+% recouvrement automatique
+\setbeamercovered{transparent}
+% symboles de navigation vide (options: vertical,etc)
+\setbeamertemplate{navigation symbols}{}
+
+%
+\setbeamerfont{institute}{size=\fontsize{9pt}{10pt}}
+
+%% numero de page
+\addtobeamertemplate{footline}{\hfill\insertframenumber/\inserttotalframenumber}
+
+%% \AtBeginSection[]
+%% {
+%%   \begin{frame}[plain, noframenumbering]{Plan}
+%%     \tableofcontents[currentsection]
+%%  \end{frame}
+%% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%
+\title{%
+  Introduction to R
+}
+\author{%
+  %Simon Tournier
+}
+\date{November, 22 2018}
+
+\institute{%
+  \texttt{simon.tournier@univ-paris-diderot.fr}
+}
+
+\begin{document}
+
+%%%%%%%%%%%%
+\begin{frame}[plain, noframenumbering]
+  \titlepage
+\end{frame}
+%%%%%%%%%%%%
+
+
+\begin{frame}{What is R? -- analogy}
+
+  \begin{tabular}{c|c}
+    Analysis & Experiment
+    \\
+    \hline
+    \begin{minipage}{0.49\textwidth}
+      \begin{block}{Environment}
+        \centering
+        RStudio (text editor)
+      \end{block}
+      \begin{exampleblock}{Strategy}
+        \centering
+        Scripts, Plots and Commands
+      \end{exampleblock}
+
+      \begin{alertblock}{Raw}
+        \centering
+        Files \texttt{.R .r .Rmd}
+      \end{alertblock}
+    \end{minipage}
+    &
+    \begin{minipage}{0.49\textwidth}
+      \begin{block}{Environment}
+        \centering
+        FlowJo / Diva
+      \end{block}
+      \begin{exampleblock}{Strategy}
+        \centering
+        Gatings and Plots
+      \end{exampleblock}
+      \begin{alertblock}{Raw}
+        \centering
+        Files \texttt{.fcs}
+      \end{alertblock}
+    \end{minipage}
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{About files}
+
+  \begin{itemize}
+  \item Files \texttt{.R .r .Rmd} are \blue{simple \textbf{text} files}
+    (TextEdit,Notepad,Emacs\dots)
+  \item Files \texttt{.fcs .wsp} are \emph{binary} files (as \texttt{.doc .xls} etc.)
+  \end{itemize}
+  \begin{alertblock}{}
+    \begin{center}
+      $\Longrightarrow$ you can \textbf{always open text} files, not binary ones.
+    \end{center}
+  \end{alertblock}
+
+  \begin{itemize}
+  \item Text files do not depend on a specific software.
+  \item Binary files are only readable by specific softwares.
+  \end{itemize}
+
+  \begin{exampleblock}{}
+    \begin{center}
+      $\Longrightarrow$ What happens if now you have to pay them?
+    \end{center}
+  \end{exampleblock}
+
+  \begin{block}{}
+    \centering
+    \textbf{Always open-able files means:}
+    \begin{itemize}
+    \item easy to share
+    \item still access in the future\footnote{Try to open a Word document from
+      1998. But I am reading text files from 1983.}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{What is R? II}
+
+  \begin{alertblock}{Raw}
+    \centering
+    R is a scripting language
+  \end{alertblock}
+  \begin{exampleblock}{Strategy}
+    \centering
+    A script is a recipe to instruct how to process data
+  \end{exampleblock}
+  \begin{block}{Environment}
+    \centering
+    We write instructions inside an environment
+  \end{block}
+
+  \bigskip
+
+  \begin{description}
+  \item[Language] = syntax + grammar
+  \item[Data] = how to represents an information
+  \end{description}
+
+  \begin{center}
+    Code is law\footnote{Lawrence Lessig:
+      \url{https://framablog.org/2010/05/22/code-is-law-lessig}}
+    so \textbf{show me the details\footnote{The devil is in the details.}!}
+  \end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
