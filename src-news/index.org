@@ -29,14 +29,19 @@ Tous les *mardis* -- *10h30-12h* -- salle Laurent Degos
 
 ** À venir
 
-- *11 décembre 2018*: À la poursuite de R
-- *18 décembre*: À préciser (biopython? snakemake? autre?)
+- *22 janvier 2019*: Mise en place un panel multicouleur
+- *29 janvier 2019*: Cytométrie et R, suite
+- *19 février 2019*: Autour de FlowJo
+
 
 ** Passés
 
 Ces sujets pourront être traités à nouveau, suivant vos
 demandes/retours.
 
+
+- *8 janvier 2019*: Quantification ARN
+- *11 décembre 2018*: À la poursuite de R
 - *4 décembre 2018*: IQue Intellicyt
 - *27 novembre 2018*: [[file:../ateliers/1_R_Intro.html][Introduction à R]] / [[../ateliers/1_R_slides.pdf][slides]] (see files: [[file:../ateliers/1_R_Intro.Rmd][1_R_Intro.Rmd]] and [[file:../ateliers/cyto.RData][cyto.RData]] and [[file:../ateliers/example.csv][example.csv]])
 - *20 novembre 2018*: Clariostar, lecteur de plaques multifonction
