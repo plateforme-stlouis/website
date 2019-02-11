@@ -29,8 +29,7 @@ Tous les *mardis* -- *10h30-12h* -- salle Laurent Degos
 
 ** À venir
 
-- *22 janvier 2019*: Mise en place un panel multicouleur
-- *29 janvier 2019*: Cytométrie et R, suite
+- *12 février 2019*: Retour d'expérience long-read (Nanopore/MinION)
 - *19 février 2019*: Autour de FlowJo
 
 
@@ -40,6 +39,8 @@ Ces sujets pourront être traités à nouveau, suivant vos
 demandes/retours.
 
 
+- *22 janvier 2019*: Mise en place un panel multicouleur
+- *29 janvier 2019*: Cytométrie et R, suite
 - *8 janvier 2019*: Quantification ARN
 - *11 décembre 2018*: À la poursuite de R
 - *4 décembre 2018*: IQue Intellicyt
