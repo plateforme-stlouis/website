@@ -1,0 +1,78 @@
+# -*- mode: org ; coding: utf-8 -*-
+#+STARTUP: showall
+
+#+TITLE:
+#+AUTHOR: simon
+#+EMAIL: prenom(simon) . nom(tournier) @ u-pariscite.fr
+#+DATE: first announce <2027-10-07 Thu>
+#+OPTIONS: ^:nil toc:nil num:nil
+#+LATEX_HEADER: \usepackage{hyperref}
+#+LATEX_HEADER: \usepackage{datetime}
+#+LATEX: {}\footnotetext{This document was generated the: \today, \currenttime}
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../css/gnu.css" />
+#+HTML_HEAD: <link rel="stylesheet" href="../css/gnu.css" />
+
+
+# (setq org-link-file-path-type 'relative)
+
+
+#+BEGIN_center
+*Feel free to contact [[mailto:etienneOcamenen@insermOfr Replace O par .][us]]!*
+#+END_center
+
+*FAIR Ensemble*: monthly meeting series where we, bioinformatics, chat.
+
++ *Why?* Our goal is to connect the community and share practical approaches
+  that make research more FAIR and workflows more reliable.
++ *Who?* Anyone interested. Feel free to join! Let's foster interactions and skill sharing.
++ *When?* The first Monday of every month at 2:00 PM.
++ *How?* A 30-minute presentation followed by an interactive Q&A.
++ *Where?* The location is confirmed ahead of the session.
+  + /Salle du Conseil/: Main entrance of Hayem building; Second floor; Right;
+    Room facing the entrance.
+  + /Salle Laurent Degos/: Main entrance of Hayem building; Basement; Right;
+    Room on the left
+  + /Salle Orchidée/: Main entrance of Hayem building; First floor; Right;
+    Corridor red & green; Room on the left, halfway.
+
+#+begin_center
+[[https://www.ouvrirlascience.fr/fair-principles/][FAIR]] = Findable, Accessible, Interoperable, Reusable
+#+end_center
+
+* FAIR Ensemble meetings
+#+BEGIN_VERSE
+*First monday -- 14h-15h*
+#+END_VERSE
+
+** Coming (2026-2027)
+
+#+BEGIN_VERSE
+/Willing to share a skill?  Please join us!/
+#+END_VERSE
+
++ *November 2*: Round table
++ *December 7*:
++ *January 4*:
++ *February 1*:
++ *March 1*:
++ *April 5*:
++ *May 3*:
++ *June 7*:
+
+* Past 2025-2026
+
+1) *June 1, 2026*: Hands-on Guix -- Simon (+ summer snacks)
+2) *May 11, 2026*: Multi-omics analyses using [[https://en.wikipedia.org/wiki/Regularized_canonical_correlation_analysis][RGCCA]] method -- Étienne
+3) *April 13, 2026*: [[https://snakemake.readthedocs.io/en/stable/][Snakemake]]: workflow management  -- Sidwell
+4) *March 2, 2026*: [[https://www.softwareheritage.org/][Software Heritage]]: archiving source code, and beyond -- Simon
+5) *February 2, 2026*: R packaging for project management -- Étienne
+6) *January 12, 2026*: [[https://hpc.guix.info/][Guix]]: long-term and transparent reproducible
+   environments -- Simon
+7) *December 1, 2025*: R environment and running on [[https://doc.cluster.france-bioinformatique.fr/][IFB]] computing cluster -- Étienne
+8) *November 3, 2025*: Round table
+
+
+
+#+BEGIN_CENTER
+[[https://institut-recherche-saint-louis.fr/][Home]]
+#+END_CENTER

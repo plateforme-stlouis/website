@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-02-11 Mon 21:07 -->
+<!-- 2026-10-14 Wed 12:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Quelques nouvelles plus ou moins récentes</title>
-<meta name="generator" content="Org mode" />
+<title>&lrm;</title>
 <meta name="author" content="simon" />
+<meta name="generator" content="Org Mode" />
 <style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,23 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-c:before { content: 'C'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -70,7 +72,7 @@
   pre.src-haskell:before { content: 'Haskell'; }
   pre.src-hledger:before { content: 'hledger'; }
   pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
+  pre.src-js:before { content: 'JavaScript'; }
   pre.src-latex:before { content: 'LaTeX'; }
   pre.src-ledger:before { content: 'Ledger'; }
   pre.src-lisp:before { content: 'Lisp'; }
@@ -190,144 +192,102 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
 <link rel="stylesheet" type="text/css" href="../css/gnu.css" />
 <link rel="stylesheet" href="../css/gnu.css" />
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
-<h1 class="title">Quelques nouvelles plus ou moins récentes</h1>
+<div id="content" class="content">
 <div class="org-center">
 <p>
-<b>N'hésitez pas à nous <a href="../index.html#contact">contacter</a> !</b>
+<b>Feel free to contact <a href="mailto:etienneOcamenen@insermOfr%20Replace%20O%20par%20.">us</a>!</b>
 </p>
 </div>
 
-
-
-<div id="outline-container-org9b9c11e" class="outline-2">
-<h2 id="org9b9c11e">Atelier Technologique</h2>
-<div class="outline-text-2" id="text-org9b9c11e">
-<p class="verse">
-Tous les <b>mardis</b> &#x2013; <b>10h30-12h</b> &#x2013; salle Laurent Degos<br />
-</p>
-</div>
-
-<div id="outline-container-org885f45e" class="outline-3">
-<h3 id="org885f45e">À venir</h3>
-<div class="outline-text-3" id="text-org885f45e">
-<ul class="org-ul">
-<li><b>12 février 2019</b>: Retour d'expérience long-read (Nanopore/MinION)</li>
-<li><b>19 février 2019</b>: Autour de FlowJo</li>
-</ul>
-</div>
-</div>
-
-
-<div id="outline-container-org3ec7364" class="outline-3">
-<h3 id="org3ec7364">Passés</h3>
-<div class="outline-text-3" id="text-org3ec7364">
 <p>
-Ces sujets pourront être traités à nouveau, suivant vos
-demandes/retours.
+<b>FAIR Ensemble</b>: monthly meeting series where we, bioinformatics, chat.
 </p>
 
-
 <ul class="org-ul">
-<li><b>22 janvier 2019</b>: Mise en place un panel multicouleur</li>
-<li><b>29 janvier 2019</b>: Cytométrie et R, suite</li>
-<li><b>8 janvier 2019</b>: Quantification ARN</li>
-<li><b>11 décembre 2018</b>: À la poursuite de R</li>
-<li><b>4 décembre 2018</b>: IQue Intellicyt</li>
-<li><b>27 novembre 2018</b>: <a href="../ateliers/1_R_Intro.html">Introduction à R</a> / <a href="../ateliers/1_R_slides.pdf">slides</a> (see files: <a href="../ateliers/1_R_Intro.Rmd">1_R_Intro.Rmd</a> and <a href="../ateliers/cyto.RData">cyto.RData</a> and <a href="../ateliers/example.csv">example.csv</a>)</li>
-<li><b>20 novembre 2018</b>: Clariostar, lecteur de plaques multifonction</li>
-<li><b>13 novembre 2018</b>: Incucyte S3: 1 an après&#x2026;</li>
-<li><b>6 novembre 2018</b>: Retour sur un test de MinION</li>
-<li><b>30 octobre 2018</b>: Qualification des acides nucléiques</li>
-<li><b>23 octobre 2018</b>: Outils et Astuces pour mettre en place un panel multicouleurs</li>
-<li><b>09 octobre 2018</b>: Partage d'expériences &#x2013; instrument Incucyte</li>
-<li><b>18 septembre 2018</b>: Présentation par Société Miltenyi Biotec (FlowLogic, MACSQuant)</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org4fb2ac7" class="outline-2">
-<h2 id="org4fb2ac7">Docs</h2>
-<div class="outline-text-2" id="text-org4fb2ac7">
+<li><b>Why?</b> Our goal is to connect the community and share practical approaches
+that make research more FAIR and workflows more reliable.</li>
+<li><b>Who?</b> Anyone interested. Feel free to join! Let's foster interactions and skill sharing.</li>
+<li><b>When?</b> The first Monday of every month at 2:00 PM.</li>
+<li><b>How?</b> A 30-minute presentation followed by an interactive Q&amp;A.</li>
+<li><b>Where?</b> The location is confirmed ahead of the session.
 <ul class="org-ul">
-<li><a href="../docs/Tarifs-Plateforme.pdf">Tarifs de Plateforme Saint-Louis</a></li>
-<li><a href="../docs/Cyto-configs.pdf">Configuration des cytométres</a> / <a href="http://www.bdbiosciences.com/us/s/spectrumviewer">BD Spectrum Viewer</a> / <a href="https://www.thermofisher.com/fr/fr/home/life-science/cell-analysis/labeling-chemistry/fluorescence-spectraviewer.html">ThermoFisher Spectra Viewer</a></li>
-<li><a href="../docs/CheatSheet-cmd-line.html">Petit manuel de survie pour utiliser un terminal</a></li>
+<li><i>Salle du Conseil</i>: Main entrance of Hayem building; Second floor; Right;
+Room facing the entrance.</li>
+<li><i>Salle Laurent Degos</i>: Main entrance of Hayem building; Basement; Right;
+Room on the left</li>
+<li><i>Salle Orchidée</i>: Main entrance of Hayem building; First floor; Right;
+Corridor red &amp; green; Room on the left, halfway.</li>
+</ul></li>
 </ul>
-
-
-<p class="verse">
-<b>N'hésitez pas à nous <a href="../index.html#contact">contacter</a> !</b><br />
-</p>
-
 
 <div class="org-center">
 <p>
-<a href="../index.html">Page Principale</a>
+<a href="https://www.ouvrirlascience.fr/fair-principles/">FAIR</a> = Findable, Accessible, Interoperable, Reusable
+</p>
+</div>
+<div id="outline-container-org0372d59" class="outline-2">
+<h2 id="org0372d59">FAIR Ensemble meetings</h2>
+<div class="outline-text-2" id="text-org0372d59">
+<p class="verse">
+<b>First monday &ndash; 14h-15h</b><br />
+</p>
+</div>
+<div id="outline-container-org9703962" class="outline-3">
+<h3 id="org9703962">Coming (2026-2027)</h3>
+<div class="outline-text-3" id="text-org9703962">
+<p class="verse">
+<i>Willing to share a skill?  Please join us!</i><br />
+</p>
+
+<ul class="org-ul">
+<li><b>November 2</b>: Round table</li>
+<li><b>December 7</b>:</li>
+<li><b>January 4</b>:</li>
+<li><b>February 1</b>:</li>
+<li><b>March 1</b>:</li>
+<li><b>April 5</b>:</li>
+<li><b>May 3</b>:</li>
+<li><b>June 7</b>:</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2749975" class="outline-2">
+<h2 id="org2749975">Past 2025-2026</h2>
+<div class="outline-text-2" id="text-org2749975">
+<ol class="org-ol">
+<li><b>June 1, 2026</b>: Hands-on Guix &ndash; Simon (+ summer snacks)</li>
+<li><b>May 11, 2026</b>: Multi-omics analyses using <a href="https://en.wikipedia.org/wiki/Regularized_canonical_correlation_analysis">RGCCA</a> method &ndash; Étienne</li>
+<li><b>April 13, 2026</b>: <a href="https://snakemake.readthedocs.io/en/stable/">Snakemake</a>: workflow management  &ndash; Sidwell</li>
+<li><b>March 2, 2026</b>: <a href="https://www.softwareheritage.org/">Software Heritage</a>: archiving source code, and beyond &ndash; Simon</li>
+<li><b>February 2, 2026</b>: R packaging for project management &ndash; Étienne</li>
+<li><b>January 12, 2026</b>: <a href="https://hpc.guix.info/">Guix</a>: long-term and transparent reproducible
+environments &ndash; Simon</li>
+<li><b>December 1, 2025</b>: R environment and running on <a href="https://doc.cluster.france-bioinformatique.fr/">IFB</a> computing cluster &ndash; Étienne</li>
+<li><b>November 3, 2025</b>: Round table</li>
+</ol>
+
+
+
+<div class="org-center">
+<p>
+<a href="https://institut-recherche-saint-louis.fr/">Home</a>
 </p>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: first release <span class="timestamp-wrapper"><span class="timestamp">&lt;2018-09-18 Tue&gt;</span></span></p>
+<p class="date">Date: first announce <span class="timestamp-wrapper"><span class="timestamp">&lt;2027-10-07 Thu&gt;</span></span></p>
 <p class="author">Author: simon</p>
-<p class="date">Created: 2019-02-11 Mon 21:07</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="date">Created: 2026-10-14 Wed 12:07</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
